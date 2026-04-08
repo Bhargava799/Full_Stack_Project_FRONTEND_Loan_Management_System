@@ -1,0 +1,43 @@
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-xs);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.active,
+.status-badge.paid,
+.status-badge.completed {
+    background: var(--accent-primary-dim);
+    color: var(--accent-primary);
+}
+
+.status-badge.pending,
+.status-badge.upcoming {
+    background: var(--accent-warning-dim);
+    color: var(--accent-warning);
+}
+
+.status-badge.overdue,
+.status-badge.defaulted,
+.status-badge.rejected {
+    background: var(--accent-danger-dim);
+    color: var(--accent-danger);
+}
+
+.status-badge.inactive {
+    background: rgba(100, 116, 139, 0.15);
+    color: var(--text-tertiary);
+}
+
+.status-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}

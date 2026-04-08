@@ -1,0 +1,373 @@
+/* ===== Shared Page Styles ===== */
+
+/* Activity Feed */
+.activity-feed {
+    padding: var(--spacing-lg);
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.activity-dot.payment {
+    background: var(--accent-primary);
+}
+
+.activity-dot.application {
+    background: var(--accent-secondary);
+}
+
+.activity-dot.user {
+    background: var(--accent-info);
+}
+
+.activity-dot.alert {
+    background: var(--accent-danger);
+}
+
+.activity-dot.offer {
+    background: var(--accent-warning);
+}
+
+.activity-dot.report {
+    background: #a855f7;
+}
+
+.activity-text {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.activity-time {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* Card Sections */
+.card-section {
+    padding: var(--spacing-lg);
+}
+
+.card-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}
+
+.card-section-header h3 {
+    font-size: var(--font-md);
+    font-weight: 700;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* Detail Grid */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.detail-item {
+    padding: var(--spacing-sm) 0;
+}
+
+.detail-item .detail-label {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.detail-item .detail-value {
+    font-size: var(--font-base);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Preview Box */
+.preview-box {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.preview-box h4 {
+    font-size: var(--font-md);
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-primary);
+}
+
+.preview-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: var(--font-sm);
+}
+
+.preview-row:last-child {
+    border-bottom: none;
+}
+
+.preview-row .preview-label {
+    color: var(--text-secondary);
+}
+
+.preview-row .preview-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    margin: var(--spacing-md) 0;
+}
+
+.progress-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.progress-bar-track {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: var(--gradient-primary);
+    transition: width 1s ease;
+}
+
+/* Risk Meter */
+.risk-meter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.risk-meter-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.risk-meter-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease;
+}
+
+.risk-meter-value {
+    font-weight: 700;
+    font-size: var(--font-sm);
+    min-width: 32px;
+    text-align: right;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    color: var(--text-muted);
+}
+
+.empty-state-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Quick summary items for lender/borrower */
+.loan-summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.loan-summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all var(--transition-fast);
+}
+
+.loan-summary-item:hover {
+    background: var(--bg-glass-hover);
+    border-color: var(--border-color);
+}
+
+.loan-summary-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.loan-summary-info .loan-id {
+    font-weight: 600;
+    font-size: var(--font-sm);
+    color: var(--accent-primary);
+}
+
+.loan-summary-info .loan-purpose {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+}
+
+.loan-summary-amount {
+    font-weight: 700;
+    font-size: var(--font-base);
+}
+
+/* Payment item */
+.payment-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.payment-date {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-primary-dim);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.payment-date .day {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: var(--accent-primary);
+    line-height: 1;
+}
+
+.payment-date .month {
+    font-size: 10px;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.payment-details {
+    flex: 1;
+}
+
+.payment-details .payment-desc {
+    font-size: var(--font-sm);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.payment-details .payment-loan {
+    font-size: var(--font-xs);
+    color: var(--text-tertiary);
+}
+
+.payment-amount {
+    font-weight: 700;
+    font-size: var(--font-base);
+}
+
+/* Report card */
+.report-card {
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.report-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-color-hover);
+}
+
+.report-card-icon {
+    font-size: 28px;
+    margin-bottom: var(--spacing-md);
+}
+
+.report-card h4 {
+    font-size: var(--font-base);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.report-card p {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
